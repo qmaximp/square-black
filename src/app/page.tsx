@@ -1,17 +1,10 @@
-import styles from './page.module.css'
+import Square from '@/components/square/Square'
 
 export default function Home() {
 	return (
-		<main className={styles.main}>
-			<h1>Я КУБИК</h1>
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<span className={styles.square}></span>
-		</main>
+		<>
+			<h1 style={{ marginBottom: '20px' }}>I Square</h1>
+			<Square />
+		</>
 	)
 }

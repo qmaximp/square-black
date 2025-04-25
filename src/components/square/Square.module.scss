@@ -1,8 +1,9 @@
-.main {
+.wrapper {
 	height: 100vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	flex-direction: column;
 	.square {
 		display: block;
 		width: 100px;
