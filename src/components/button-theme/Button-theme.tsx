@@ -1,8 +1,7 @@
 'use client'
-import Square from '@/components/square/Square'
 import { useEffect, useState } from 'react'
 
-export default function Home() {
+const Button_theme = () => {
 	const [theme, setTheme] = useState('')
 
 	useEffect(() => {
@@ -15,21 +14,14 @@ export default function Home() {
 		window.localStorage.setItem('theme', newTheme)
 		setTheme(newTheme)
 	}
+
 	return (
 		<main className={theme}>
-			<h1
-				style={{
-					fontSize: '50px',
-					position: 'fixed',
-					top: '0',
-				}}
-			>
-				I black square
-			</h1>
-			<Square />
 			<button onClick={switchTheme} theme={theme}>
 				{theme === 'light' ? 'Switch to light mode' : 'Switch to dark mode'}
 			</button>
 		</main>
 	)
 }
+
+export default Button_theme
