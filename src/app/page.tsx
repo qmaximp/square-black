@@ -7,7 +7,9 @@ export default function Home() {
 
 	useEffect(() => {
 		const localTheme = window.localStorage.getItem('theme')
-		setTheme(localTheme)
+		if (localTheme !== null) {
+			setTheme(localTheme)
+		}
 	}, [])
 
 	const switchTheme = () => {
@@ -27,7 +29,7 @@ export default function Home() {
 				I black square
 			</h1>
 			<Square />
-			<button onClick={switchTheme} theme={theme}>
+			<button onClick={switchTheme} data-theme={theme}>
 				{theme === 'light' ? 'Switch to light mode' : 'Switch to dark mode'}
 			</button>
 		</main>
